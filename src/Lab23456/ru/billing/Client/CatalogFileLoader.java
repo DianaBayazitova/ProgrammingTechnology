@@ -40,9 +40,9 @@ public class CatalogFileLoader implements CatalogLoader {
             InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
             Scanner s = new Scanner(isr);
 
-            while(s.hasNextLine()) {
+            while (s.hasNextLine()) {
                 line = s.nextLine();
-                if(line.length() == 0) {
+                if (line.length() == 0) {
                     break;
                 }
                 String[] item_fld = line.split(";");

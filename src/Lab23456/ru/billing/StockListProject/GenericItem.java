@@ -1,7 +1,8 @@
 package Lab23456.ru.billing.StockListProject;
+
 import java.util.StringJoiner;
 
-public class GenericItem implements Cloneable{
+public class GenericItem implements Cloneable {
 
     private static int currentID = 0;
 
@@ -59,7 +60,7 @@ public class GenericItem implements Cloneable{
         this.productCategory = productCategory;
     }
 
-    public GenericItem(){
+    public GenericItem() {
         this.ID = GenericItem.currentID++;
     }
 
@@ -89,7 +90,7 @@ public class GenericItem implements Cloneable{
         this.productCategory = category;
     }
 
-    public void printAll(){
+    public void printAll() {
         System.out.printf(
                 "ID: %d, Name: %-10s, price:%8.2f, Analogue ID: %s, Product Category: %-10s \n",
                 this.ID, this.name, this.price, (this.analogue == null) ? "no" : this.analogue.ID, this.productCategory
@@ -127,7 +128,7 @@ public class GenericItem implements Cloneable{
 
     @Override
     public String toString() {
-        return new StringJoiner(" | " ,
+        return new StringJoiner(" | ",
                 GenericItem.class.getSimpleName() + " { ",
                 " }")
                 .add("ID=" + this.ID)

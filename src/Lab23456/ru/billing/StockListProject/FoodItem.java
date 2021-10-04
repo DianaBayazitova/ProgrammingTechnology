@@ -24,7 +24,7 @@ public class FoodItem extends GenericItem {
         this.expires = expires;
     }
 
-    public FoodItem(){
+    public FoodItem() {
     }
 
     public FoodItem(String name) {
@@ -97,7 +97,7 @@ public class FoodItem extends GenericItem {
 
     @Override
     public String toString() {
-        return new StringJoiner(" | " ,
+        return new StringJoiner(" | ",
                 GenericItem.class.getSimpleName() + " { ",
                 " }")
                 .add("ID=" + this.getID())

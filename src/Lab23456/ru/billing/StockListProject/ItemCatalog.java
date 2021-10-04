@@ -1,4 +1,5 @@
 package Lab23456.ru.billing.StockListProject;
+
 import Lab23456.ru.billing.Exceptions.ItemAlreadyExistsException;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class ItemCatalog {
     }
 
     public void printItems() {
-        for(GenericItem i : ALCatalog) {
+        for (GenericItem i : ALCatalog) {
             System.out.println(i);
         }
     }
@@ -29,8 +30,8 @@ public class ItemCatalog {
     }
 
     public GenericItem findItemByIDAL(int id) {
-        for(GenericItem i : ALCatalog) {
-            if(i.getID() == id) {
+        for (GenericItem i : ALCatalog) {
+            if (i.getID() == id) {
                 return i;
             }
         }

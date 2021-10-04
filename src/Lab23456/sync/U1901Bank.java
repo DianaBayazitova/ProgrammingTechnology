@@ -21,7 +21,7 @@ public class U1901Bank {
         this.intFrom = intFrom;
     }
 
-    public U1901Bank(){
+    public U1901Bank() {
     }
 
     public synchronized void calc(int intTransaction, long lngTimeout) {
@@ -37,6 +37,6 @@ public class U1901Bank {
         this.intTo += intTransaction;
 
         System.out.printf("\nCurrent values AFTER TRANSACTION \n intTo: %d \n intFrom: %d \n ThreadName: %s \n",
-                this.intTo, this.intFrom,  Thread.currentThread().getName());
+                this.intTo, this.intFrom, Thread.currentThread().getName());
     }
 }

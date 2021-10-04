@@ -14,7 +14,7 @@ public class TechnicalItem extends GenericItem {
         this.warrantyTime = warrantyTime;
     }
 
-    public TechnicalItem(){
+    public TechnicalItem() {
     }
 
     public TechnicalItem(String name,
@@ -67,7 +67,7 @@ public class TechnicalItem extends GenericItem {
 
     @Override
     public String toString() {
-        return new StringJoiner(" | " ,
+        return new StringJoiner(" | ",
                 GenericItem.class.getSimpleName() + " { ",
                 " }")
                 .add("ID=" + this.getID())

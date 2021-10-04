@@ -146,30 +146,23 @@ public class Main {
 
         long begin = new Date().getTime();
 
-        for(int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 100000; i++) {
             catalog.findItemByID(8);
         }
 
         long end = new Date().getTime();
 
-        System.out.println("In HashMap: "+ (end - begin));
+        System.out.println("In HashMap: " + (end - begin));
         begin = new Date().getTime();
 
-        for(int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 100000; i++) {
             catalog.findItemByIDAL(8);
         }
         end = new Date().getTime();
-        System.out.println("In ArrayList: "+(end - begin));
+        System.out.println("In ArrayList: " + (end - begin));
 
         System.out.println("\n Before use load");
         catalog.printItems();
-
-//        CatalogLoader loader = new CatalogStubLoader();
-//        try {
-//            loader.load(catalog);
-//        } catch (CatalogLoadException e) {
-//            e.printStackTrace();
-//        }
 
         CatalogFileLoader fileLoader = new CatalogFileLoader("/Users/dianabayazitova/IdeaProjects/Lab1/src/Lab23456/ru/billing/Client/itemList");
         try {
